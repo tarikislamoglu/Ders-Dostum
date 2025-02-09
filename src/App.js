@@ -8,6 +8,7 @@ export default function app() {
     answer: 'JavaScript kütüphanesi.',
     explanation: `Birinin framework diyebilme cüretini gösterdiğini duyarsanız, onu mümkün olduğunca bilgili bir şekilde düzeltmeniz, tercihen yanıtınıza " aslında..." diye başlamanız önemlidir.`,
   })
+  const [isTrue,setIsTrue]=useState(false)
 
   /* Challenge: 
 
@@ -29,7 +30,7 @@ export default function app() {
 
       {/*-------Aşağıdaki div'i düzenleyin------------*/}
 
-      <div className='flash-card'>
+      <div className= {isTrue ? "flipped flash-card" : "flash-card"}  onClick={()=>{setIsTrue((pre)=>!pre)}}>
         {/*-------Yukarıdaki div'i düzenleyin------------*/}
 
         <div className='flash-card-inner'>
